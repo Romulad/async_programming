@@ -1,4 +1,7 @@
+"""Context switch with a generator"""
+
 import queue
+
 
 def task(name, queue:queue.Queue):
     while not queue.empty():
@@ -21,7 +24,7 @@ def main():
     done = False
     while not done:
         for t in tasks:
-            print(t)
+            print(f"generetor: {t} ")
             try:
                 resp = next(t)
                 # print(resp)
